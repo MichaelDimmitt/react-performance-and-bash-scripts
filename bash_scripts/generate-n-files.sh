@@ -1,11 +1,16 @@
 # variables
-base=../project-one/src/
+# whereami="$PWD/$0"
+# folderlocation=$(dirname $whereami)
+# echo I am here: $folderlocation
+
+allinonefolderlocation=$(dirname $PWD/$0)
+base=$allinonefolderlocation/../project-one/src/
+
+echo $base
 suffix=App.tsx;
 target=$base$suffix
 
-echo $base
-echo $suffix
-echo $target
+
 cp backup.tsx $target
 rm -rf temp1.txt;
 rm -rf temp2.txt;

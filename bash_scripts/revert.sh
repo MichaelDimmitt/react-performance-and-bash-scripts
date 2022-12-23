@@ -1,7 +1,12 @@
+
+allinonefolderlocation=$(dirname $PWD/$0)
+base=$allinonefolderlocation/../project-one/src/
+
+
 rm temp1.txt temp2.txt
-cp backup.tsx ../project-one/src/App.tsx;
+cp backup.tsx ${base}App.tsx;
 for ((i=1;i<=100;i++)); 
 do 
    # your-unix-command-here
-   rm ../project-one/src/Hello$i\.tsx
+   rm ${base}Hello$i\.tsx
 done
