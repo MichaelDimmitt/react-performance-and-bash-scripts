@@ -1,3 +1,4 @@
+rm temp1.txt temp2.txt
 cp backup.tsx ../project-one/src/App.tsx;
 for ((i=1;i<=100;i++)); 
 do 
