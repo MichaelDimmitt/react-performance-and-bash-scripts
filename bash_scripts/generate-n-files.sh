@@ -1,3 +1,4 @@
+number=100
 lib=$(dirname $PWD/$0)
 base=$lib/../project-one/src/
 
@@ -9,13 +10,13 @@ cp $lib/backup.tsx $target
 rm -rf temp1.txt;
 rm -rf temp2.txt;
 
-for ((i=1;i<=100;i++)); 
+for ((i=1;i<=$number;i++)); 
 do 
    # your-unix-command-here
    echo "import Hello$i from './Hello$i'" >> $lib/temp1.txt;
 done
 
-for ((i=1;i<=100;i++)); 
+for ((i=1;i<=$number;i++)); 
 do 
    # your-unix-command-here
    echo "<Hello$i/>" >> $lib/temp2.txt
@@ -32,7 +33,7 @@ sed -e "${line}r $lib/temp1.txt" $target > $tmp
 cp $tmp $target
 
 
-for ((i=1;i<=100;i++)); 
+for ((i=1;i<=$number;i++)); 
 do 
    # your-unix-command-here
    cp $lib/backup.tsx ${base}Hello${i}\.tsx
